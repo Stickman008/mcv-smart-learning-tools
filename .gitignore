@@ -1,1 +1,3 @@
-data/*
+common/data/*
+free_text_grader/data/*
+transcript_retrieval/data/*
