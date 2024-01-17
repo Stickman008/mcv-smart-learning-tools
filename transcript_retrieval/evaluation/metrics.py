@@ -1,5 +1,7 @@
 def hit_k(predicted, actual, k):
-    top_k_predictions = predicted[:k]
+    if len(predicted) > k:
+        top_k_predictions = predicted[:k]
+    
     return 1.0 if any(ac in top_k_predictions for ac in actual) else 0.0
     
 
@@ -20,13 +22,13 @@ def hit_k(predicted, actual, k):
 
 
 def mean_hit_k(predicted_list, labeled_list, k=10):
-    hitk_scores = [
+    hit_k_scores = [
         hit_k(predictions, labels, k)
         for predictions, labels in zip(predicted_list, labeled_list)
     ]
-    mean_hitk_score = sum(hitk_scores) / len(predicted_list)
-
-    return mean_hitk_score
+    
+    mean_hit_k_score = sum(hit_k_scores) / len(predicted_list)
+    return mean_hit_k_score
 
 
 def average_precision_k(predicted, actual, k):
