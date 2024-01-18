@@ -28,8 +28,8 @@ def average_precision_k(predicted, actual, k):
     if not actual:
         return 0.0
 
-    # return score / max(true_positives, 1)
-    return score / min(len(actual), k)
+    return score / max(true_positives, 1)
+    # return score / min(len(actual), k)
     # return score / min(len(predicted), k)
 
 

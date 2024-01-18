@@ -60,6 +60,7 @@ class Evaluation:
             report_dict["embedding_time"] / report_dict["number_of_embedding_entry"]
         )
 
+        print("Predicting")
         for k in tqdm(k_list):
             predicted_list = []
             labeled_list = []
