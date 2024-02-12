@@ -14,3 +14,6 @@ PATTERN_NUMBER_COL = "pattern_number"
 PATTERN_COL = "pattern"
 MAX_SCORE_COL = "max_score"
 NOTE_COL = "note"
+
+# evaluate
+PREDICT_SUFFIX = "_pred"
